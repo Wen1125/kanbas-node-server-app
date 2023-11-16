@@ -10,7 +10,8 @@ import "dotenv/config";
 
 const allowedOrigins = [
     "http://localhost:3000",
-    "https://a5--deluxe-capybara-917dff.netlify.app"
+    "https://a5--deluxe-capybara-917dff.netlify.app",
+    "https://a5--deluxe-capybara-917dff.netlify.app/#/Kanbas/Dashboard"
     ];
 
 const corsOptions = {
