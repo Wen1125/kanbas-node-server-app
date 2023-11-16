@@ -8,8 +8,13 @@ import ModuleRoutes from "./modules/routes.js";
 import AssignmentsRoutes from "./assignments/routes.js";
 import "dotenv/config";
 
+const allowedOrigin = "https://a5--deluxe-capybara-917dff.netlify.app";
+const corsOptions = {
+    origin: allowedOrigin,
+  };
+
 const app = express();
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 Hello(app);
 CourseRoutes(app);
