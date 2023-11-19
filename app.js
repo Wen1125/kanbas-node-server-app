@@ -8,25 +8,9 @@ import ModuleRoutes from "./modules/routes.js";
 import AssignmentsRoutes from "./assignments/routes.js";
 import "dotenv/config";
 
-const allowedOrigins = [
-    "http://localhost:3000",
-    "https://a5--deluxe-capybara-917dff.netlify.app",
-    "https://a5--deluxe-capybara-917dff.netlify.app/#/Kanbas/Dashboard"
-    ];
-
-const corsOptions = {
-origin: function (origin, callback) {
-    // Check if the request origin is in the allowedOrigins array or if it's a non-browser request (e.g., from Postman)
-    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-    callback(null, true);
-    } else {
-    callback(new Error('Not allowed by CORS'));
-    }
-},
-};
 
 const app = express();
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 Hello(app);
 CourseRoutes(app);
